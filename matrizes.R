@@ -73,3 +73,27 @@ solve(A[,1:2],A[,3])    # Encontra-se a matriz inversa
 det(A[,-3]) # determinante
 t(A) # transposta de A
 
+cadastro <- matrix( c(NA, NA, NA, NA), nrow = 3, ncol = 4, dimnames = list(NULL, c("Nome", "Idade", "Cidade", "Telefone")))
+
+cadastro[1,] <- c("Maria das Dores", 56, "São Paulo",3025-111)
+
+cadastro[2,] <- c("José Aníbal", 40, "Santos",3333-012)
+cadastro[3,] <- c("Pedro Silva", 23, 3091-777, "São Paulo")
+
+as.numeric(cadastro[1:3,2])*4
+
+#Exercícios
+
+nomes<-c("Marcos A","Paula M", "Emilio S", "Pryscilla A")
+salario<-c(4000, 2500, 1200, 3400)
+idades<-c(44, 56, 76, 40)
+
+emprestimos <- cbind(nomes, salario, idades) # Monta a matriz
+
+emprestimos[2,2] <- c(5500.33)
+
+emprestimos[,2] <- as.numeric(emprestimos[,2])*0.7
+mean(as.numeric(emprestimos[,2]))
+
+colnames(emprestimos)<-c("Nomes", "Salários", "Idades")
+
